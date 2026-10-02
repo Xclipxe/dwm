@@ -35,8 +35,10 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "imv",    NULL,       NULL,       0,            1,           -1 },
-	{ NULL,  NULL,       "Picture",       1 << 8,       1,           -1 },
+	{ "imv",      NULL,       NULL,       0,            1,           -1 },
+	{ "satty",    NULL,       NULL,       0,            1,           -1 },
+	{ "Nsxiv",    NULL,       NULL,       0,            1,           -1 },
+	{ NULL,       NULL,       "Picture",  1 << 8,       1,           -1 },
 };
 
 /* layout(s) */
