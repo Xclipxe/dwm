@@ -13,15 +13,19 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10", "Hack Nerd Font Mono:size=16",
 					"NotoColorEmoji:pixelsize=14:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+
+/* color scheme */
+static const char col_gray[]        = "#928374";
+static const char col_bg0[]         = "#282828";
+static const char col_bg0_h[]       = "#1d2021";
+static const char col_fg[]          = "#ebdbb2";
+static const char col_fg0[]         = "#fbf1c7";
+static const char col_yellow[]      = "#d79921";
+static const char col_blue[]        = "#076678";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_fg, col_bg0, col_gray },
+	[SchemeSel]  = { col_fg0, col_bg0_h, col_yellow },
 };
 
 /* tagging */
@@ -86,8 +90,6 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-m", dmenumon,
-				  "-nb", col_gray1, "-nf",
-				  col_gray3, "-sb", col_cyan, "-sf", col_gray4,
 				  NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *slockcmd[] = { "slock", NULL };
