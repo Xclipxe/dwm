@@ -95,16 +95,15 @@ static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-m", dmenumon,
 static const char *termcmd[]  = { "st", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 static const char *clipmenucmd[] = { "clipmenu", "-p", "clipboard: ", NULL };
-static const char *screeshot_copy_cmd[] = { "scrot", "-f", "-s", "-", "|",
-					    "xclip", "-selection", "clipboard",
-					    "-target", "image/png", NULL };
-static const char *screeshot_edit_cmd[] = { "scrot", "-f", "-s", "-", "|",
-					    "satty", "-f", "-", NULL };
+static const char *screenshot_copy_cmd[] = { "sh", "-c",
+        "scrot -f -s - | xclip -selection clipboard -target image/png", NULL };
+static const char *screenshot_edit_cmd[] = { "sh", "-c",
+        "scrot -f -s - | satty -f -", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ 0,                            XK_F1,     spawn,          {.v = screeshot_copy_cmd } },
-	{ 0,                            XK_F2,     spawn,          {.v = screeshot_edit_cmd } },
+	{ 0,                            XK_F1,     spawn,          {.v = screenshot_copy_cmd } },
+	{ 0,                            XK_F2,     spawn,          {.v = screenshot_edit_cmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
