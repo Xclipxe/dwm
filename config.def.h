@@ -94,7 +94,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-c", "-l", "10", "-m", dmenumon,
 				  NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *slockcmd[] = { "slock", NULL };
-static const char *clipmenucmd[] = { "clipmenu", "-p", "clipboard: ", NULL };
+static const char *clipmenucmd[] = { "clipmenu", "-p", "-i", "clipboard: ", NULL };
 static const char *screenshot_copy_cmd[] = { "sh", "-c",
         "scrot -f -s - | xclip -selection clipboard -target image/png", NULL };
 static const char *screenshot_edit_cmd[] = { "sh", "-c",
