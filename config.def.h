@@ -18,6 +18,8 @@ static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray[]        = "#928374";
 static const char col_bg0[]         = "#282828";
 static const char col_bg0_h[]       = "#1d2021";
+static const char col_bg1[]         = "#3c3836";
+static const char col_bg3[]         = "#665c54";
 static const char col_fg[]          = "#ebdbb2";
 static const char col_fg0[]         = "#fbf1c7";
 static const char col_yellow[]      = "#d79921";
@@ -25,7 +27,7 @@ static const char col_blue[]        = "#076678";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_fg, col_bg0, col_gray },
-	[SchemeSel]  = { col_fg0, col_bg0_h, col_yellow },
+	[SchemeSel]  = { col_fg0, col_bg1, col_yellow },
 };
 
 /* tagging */
