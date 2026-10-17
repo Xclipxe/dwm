@@ -45,6 +45,9 @@ static const Rule rules[] = {
 	{ "satty",             NULL,       NULL,       0,            1,           -1 },
 	{ "Nsxiv",             NULL,       NULL,       0,            1,           -1 },
 	{ "systemsettings",    NULL,       NULL,       0,            1,           -1 },
+	{ "Meeting",           NULL,       NULL,       0,            1,           -1 },
+	{ "Feishu",            NULL,       NULL,       0,            1,           -1 },
+	{ "Feishu Meetings",   NULL,       NULL,       0,            1,           -1 },
 	{ NULL,                NULL,       "Picture",  1 << 8,       1,           -1 },
 };
 
