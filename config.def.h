@@ -104,11 +104,13 @@ static const char *screenshot_copy_cmd[] = { "sh", "-c",
         "scrot -f -s - | xclip -selection clipboard -target image/png", NULL };
 static const char *screenshot_edit_cmd[] = { "sh", "-c",
         "scrot -f -s - | satty -f -", NULL };
+static const char *hex2bin_cmd[] = { "hex2bin.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ 0,                            XK_F1,     spawn,          {.v = screenshot_copy_cmd } },
 	{ 0,                            XK_F3,     spawn,          {.v = screenshot_edit_cmd } },
+	{ 0,                            XK_F4,     spawn,          {.v = hex2bin_cmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
