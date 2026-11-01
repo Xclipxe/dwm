@@ -108,7 +108,7 @@ static const char *screenshot_edit_cmd[] = { "sh", "-c",
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ 0,                            XK_F1,     spawn,          {.v = screenshot_copy_cmd } },
-	{ 0,                            XK_F2,     spawn,          {.v = screenshot_edit_cmd } },
+	{ 0,                            XK_F3,     spawn,          {.v = screenshot_edit_cmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
