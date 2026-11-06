@@ -101,7 +101,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 static const char *clipmenucmd[] = { "clipmenu", "-i", "-p", "clipboard: ", NULL };
 static const char *screenshot_copy_cmd[] = { "sh", "-c",
-        "scrot -f -s - | xclip -selection clipboard -target image/png", NULL };
+        "scrot -f -s - | copyq --start-server copy image/png -", NULL};
 static const char *screenshot_edit_cmd[] = { "sh", "-c",
         "scrot -f -s - | satty -f -", NULL };
 static const char *hex2bin_cmd[] = { "hex2bin.sh", NULL };
